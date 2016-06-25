@@ -1,4 +1,5 @@
 Note: Scroll Down to see output of this code using one example matrix
+
 ### Introduction
 
 This second programming assignment will require you to write an R
@@ -110,6 +111,7 @@ OUTPUT
 > dir()
 [1] "cachematrix.R" "README.md"    
 > source("cachematrix.R")
+
 
 > # creating a Square Matrix
 > R <- makeCacheMatrix(matrix(c(1,2,7,9), nrow = 2, ncol = 2)); 
