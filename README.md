@@ -1,3 +1,4 @@
+Note: Scroll Down to see output of this code using one example matrix
 ### Introduction
 
 This second programming assignment will require you to write an R
@@ -101,5 +102,35 @@ In order to complete this assignment, you must do the following:
     the completed R code for the assignment.
 
 ### Grading
-
 This assignment will be graded via peer assessment.
+OUTPUT
+
+> setwd("C:/Program Files/Git/ProgrammingAssignment2")
+
+> dir()
+[1] "cachematrix.R" "README.md"    
+> source("cachematrix.R")
+
+> # creating a Square Matrix
+> R <- makeCacheMatrix(matrix(c(1,2,7,9), nrow = 2, ncol = 2)); 
+
+> # calling getMat() which will return the matrix we just created
+> R$getMat();     
+      [,1] [,2]
+[1,]    1    7
+[2,]    2    9
+
+> # For the first time call to cacheSolve(), as there is no cached value, it calculates the inverse and returns it.
+> cacheSolve(R) 
+     [,1] [,2]
+[1,] -1.8  1.4
+[2,]  0.4 -0.2
+
+> # This time calling cacheSolve() again will retrieve cached value instead of computing it again as inverse value has been cached in above call.
+> cacheSolve(R) 
+Cached data is as follows
+     [,1] [,2]
+[1,] -1.8  1.4
+[2,]  0.4 -0.2
+
+
